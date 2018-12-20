@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <script>
+    function test(){
+      var a = arguments[0];
+      var obj = document.getElementById("f1").value;
+      
+
+      document.getElementById("f2").innerHTML= obj;
+
+    }
+    setInterval('test()',1);
+    </script>
+<form>
+  input:<input type="text" id = "f1">
+  <input type ="submit" onclick="test('f1')">
+
+</form>
+  <span id = "f2">ここが変化します。</span>  
+  </head>
+  <body>
+
+  </body>
+</html>
