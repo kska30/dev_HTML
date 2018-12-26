@@ -62,23 +62,24 @@
 
 
       // 各列に表示内容を設定
-      c1.innerHTML = '<input type="text"  id="R1' + count + '">';
-      c2.innerHTML = '<input type="text"  id="R2' + count + '">';
-      c3.innerHTML = '<input type="text"  id="R3' + count + '">';
-      c4.innerHTML = '<input class="edtbtn" type="button" id="edtBtn' + count + '" value="確定" onclick="editRow(this)">';
+      c1.innerHTML = '<input type="text">';
+      c2.innerHTML = '<input type="text">';
+      c3.innerHTML = '<input type="text">';
+      c4.innerHTML = '<input class="edtbtn" type="button" value="確定" onclick="editRow(this)">';
       c5.innerHTML = '<input type="button" value="削除1" onclick="coldel(this)">';
 
       
       // 追加した行の入力フィールドへフォーカスを設定
       var objInp = document.getElementById("txt" + count);
-      if (objInp)
-        objInp.focus();
+      if (objInp) objInp.focus();
     }
 
 
     /*
      * editRow: 編集ボタン該当行の内容を入力・編集またモード切り替え
      */
+
+
     function editRow(obj) {
       var objTR = obj.parentNode.parentNode;
       var rowId = objTR.sectionRowIndex;
@@ -87,7 +88,6 @@
       var InR3 = document.getElementById("R3" + rowId);
 
       var objBtn = document.getElementById("edtBtn" + rowId);
-
 
 
       // モードの切り替えはボタンの値で判定   
