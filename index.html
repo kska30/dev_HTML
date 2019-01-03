@@ -2,6 +2,7 @@
 <html lang="ja">
 
 <head>
+    <meta charset="UTF-8">
   <script>
     function test() {
       var a = arguments[0];
@@ -35,6 +36,7 @@
       if (!confirm("Aer you sure you delete this row ?")) return;
       // 削除ボタンを押下された行を取得
       tr = obj.parentNode.parentNode;
+      
       // trのインデックスを取得して行を削除する
       tr.parentNode.deleteRow(tr.sectionRowIndex);
     }
@@ -148,8 +150,12 @@
     </tr>
 
   </table>
+<form>
+  <input type="file" name="file_data">
+</form>
+<script>
 
-
+</script>
 
 </body>
 
